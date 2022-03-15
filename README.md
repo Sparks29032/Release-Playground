@@ -18,6 +18,14 @@ Click on the "Wolfy" executable to run.
 
 **NOTE:** Having caps lock or holding shift may mess with reading in the button presses.
 
+### Use with OBS
+Use a "Window Capture" on the Wolfy.exe program.
+
+To get rid of the green color, use a Chroma Key filter with the settings:
+~333 Similarity, 
+1 Smoothness, 
+1 Key Color Spill Reduction.
+
 ### Using your own avatar
 To use your own avatars, you simply have to change the pictures in the "Images" folder.
 
