@@ -10,3 +10,8 @@ Upon pressing an alphanumerical character or 'space', the avatar will perform a 
 Different mouse and keyboard buttons will simulate animations in slightly different locations.
 
 **NOTE:** Having caps lock or holding shift may mess with reading in the button presses.
+
+# How to use
+Download Plugin.zip and extract all files.
+
+Click on the "Wolfy" executable to run.
