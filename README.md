@@ -17,3 +17,10 @@ Download Plugin.zip and extract all files.
 Click on the "Wolfy" executable to run.
 
 **NOTE:** Having caps lock or holding shift may mess with reading in the button presses.
+
+### Using your own avatar
+To use your own avatars, you simply have to change the pictures in the "Images" folder.
+
+However, refrain from #00ff00 as that color will be displayed as clear.
+
+Ensure your images are around the same height as the current model.
