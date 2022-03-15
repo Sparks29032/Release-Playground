@@ -8,7 +8,7 @@ if __name__ == "__main__":
     display.title("Wolfy")
 
     # sets all white colored items to clear (no white color allowed on any sprites)
-    display.attributes('-transparentcolor', '#ffffff')
+    display.attributes('-transparentcolor', '#00ff00')
 
     # create our character
     character = Character(display)

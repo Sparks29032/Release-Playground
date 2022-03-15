@@ -13,7 +13,7 @@ class Character:
         h = self.base.height()
 
         # use the dimensions of the base image to create the canvas
-        self.canvas = Canvas(d, bg='white', width=w, height=h)
+        self.canvas = Canvas(d, bg='#00ff00', width=w, height=h)
         self.canvas.pack()
 
         # buffer actions
