@@ -9,9 +9,11 @@ Upon pressing an alphanumerical character or 'space', the avatar will perform a 
 
 Different mouse and keyboard buttons will simulate animations in slightly different locations.
 
-**NOTE:** Having caps lock or holding shift may mess with reading in the button presses.
+There may be a green border around the character, but software like OBS will ignore it.
 
 # How to use
 Download Plugin.zip and extract all files.
 
 Click on the "Wolfy" executable to run.
+
+**NOTE:** Having caps lock or holding shift may mess with reading in the button presses.
