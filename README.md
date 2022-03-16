@@ -14,6 +14,8 @@ There may be a green border around the character, but software like OBS will ign
 # How to use
 Go to the releases page and download Character.Plugin.Zip.
 
+https://github.com/Sparks29032/Character_Plugin/releases
+
 Click on the "Wolfy" executable in the "dist" folder to run.
 
 **NOTE:** Having caps lock or holding shift may mess with reading in the button presses.
