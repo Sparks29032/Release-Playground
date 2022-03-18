@@ -105,11 +105,11 @@ def manage(character: Character):
         # if the button is pressed down
         if pressed:
             # various mouse buttons
-            if str(button) == "Button.left":
+            if str(button) == "Button.right":
                 character.click_mouse(-30, 20)
             if str(button) == "Button.middle":
                 character.click_mouse(-20, 20)
-            if str(button) == "Button.right":
+            if str(button) == "Button.left":
                 character.click_mouse(-10, 20)
 
         # otherwise, release it
