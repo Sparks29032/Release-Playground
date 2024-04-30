@@ -4,6 +4,32 @@ Release Notes
 
 .. current developments
 
+0.0.63
+======
+
+**Added:**
+
+* this
+  has
+  been
+  added
+* this htis !
+
+**Changed:**
+
+* nothing
+
+**Fixed:**
+
+* fixing my brain
+* a
+  n
+  o
+  th er
+  fix
+
+
+
 0.0.62
 ======
 
