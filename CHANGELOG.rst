@@ -4,6 +4,11 @@ Release Notes
 
 .. current developments
 
+0.0.66rc0
+=========
+
+
+
 0.0.65rc0
 =========
 
