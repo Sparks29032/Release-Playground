@@ -1,4 +1,4 @@
-from tkinter import Canvas, PhotoImage, NW
+from tkinter import NW, Canvas, PhotoImage
 
 
 class Character:
@@ -13,7 +13,7 @@ class Character:
         h = self.base.height()
 
         # use the dimensions of the base image to create the canvas
-        self.canvas = Canvas(d, bg='#00ff00', width=w, height=h)
+        self.canvas = Canvas(d, bg="#00ff00", width=w, height=h)
         self.canvas.pack()
 
         # buffer actions
@@ -76,17 +76,27 @@ class Character:
 
     # draws the mouse and left hand
     def draw_mouse(self):
-        self.c_mouse = self.canvas.create_image(self.mouse_w, self.mouse_h, anchor=NW, image=self.mouse)
-        self.c_l_hand = self.canvas.create_image(self.mouse_w + self.l_hand_w,
-                                                 self.mouse_h + self.l_hand_h,
-                                                 anchor=NW, image=self.l_hand)
+        self.c_mouse = self.canvas.create_image(
+            self.mouse_w, self.mouse_h, anchor=NW, image=self.mouse
+        )
+        self.c_l_hand = self.canvas.create_image(
+            self.mouse_w + self.l_hand_w,
+            self.mouse_h + self.l_hand_h,
+            anchor=NW,
+            image=self.l_hand,
+        )
 
     # draws the keyboard
     def draw_keyboard(self):
-        self.c_keyboard = self.canvas.create_image(self.keyboard_w, self.keyboard_h, anchor=NW, image=self.keyboard)
-        self.c_r_hand = self.canvas.create_image(self.keyboard_w + self.r_hand_w,
-                                                 self.keyboard_h + self.r_hand_h,
-                                                 anchor=NW, image=self.r_hand)
+        self.c_keyboard = self.canvas.create_image(
+            self.keyboard_w, self.keyboard_h, anchor=NW, image=self.keyboard
+        )
+        self.c_r_hand = self.canvas.create_image(
+            self.keyboard_w + self.r_hand_w,
+            self.keyboard_h + self.r_hand_h,
+            anchor=NW,
+            image=self.r_hand,
+        )
 
     # moves the mouse to desired location
     def get_motion(self, x, y):
@@ -101,12 +111,16 @@ class Character:
     # moves the mouse to a new desired location
     def position_mouse(self, c_x, c_y):
         # move the hand and mouse
-        self.canvas.move(self.c_mouse,
-                         c_x + self.mouse_w - self.curr_x,
-                         c_y + self.mouse_h - self.curr_y)
-        self.canvas.move(self.c_l_hand,
-                         c_x + self.mouse_w - self.curr_x,
-                         c_y + self.mouse_h - self.curr_y)
+        self.canvas.move(
+            self.c_mouse,
+            c_x + self.mouse_w - self.curr_x,
+            c_y + self.mouse_h - self.curr_y,
+        )
+        self.canvas.move(
+            self.c_l_hand,
+            c_x + self.mouse_w - self.curr_x,
+            c_y + self.mouse_h - self.curr_y,
+        )
 
         # identify new current position
         self.curr_x = c_x + self.mouse_w
@@ -127,9 +141,12 @@ class Character:
     # put the left hand back to where it started on the mouse
     def reset_l_hand(self):
         self.canvas.delete(self.c_l_hand)
-        self.c_l_hand = self.canvas.create_image(self.curr_x + self.l_hand_w,
-                                                 self.curr_y + self.l_hand_h,
-                                                 anchor=NW, image=self.l_hand)
+        self.c_l_hand = self.canvas.create_image(
+            self.curr_x + self.l_hand_w,
+            self.curr_y + self.l_hand_h,
+            anchor=NW,
+            image=self.l_hand,
+        )
 
         # allow other actions on the left side
         self.l_buffer = False
@@ -149,9 +166,12 @@ class Character:
     # put the right hand back to where it started relative to the keyboard
     def reset_r_hand(self):
         self.canvas.delete(self.c_r_hand)
-        self.c_r_hand = self.canvas.create_image(self.keyboard_w + self.r_hand_w,
-                                                 self.keyboard_h + self.r_hand_h,
-                                                 anchor=NW, image=self.r_hand)
+        self.c_r_hand = self.canvas.create_image(
+            self.keyboard_w + self.r_hand_w,
+            self.keyboard_h + self.r_hand_h,
+            anchor=NW,
+            image=self.r_hand,
+        )
 
         # allow other actions on the right side
         self.r_buffer = False

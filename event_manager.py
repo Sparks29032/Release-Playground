@@ -1,4 +1,5 @@
 from pynput import keyboard, mouse
+
 from display_character import Character
 
 
@@ -11,77 +12,77 @@ def manage(character: Character):
             key.char
 
             # keyboard events given key pressed
-            if key.char == 'q':
+            if key.char == "q":
                 character.keyboard_press(46, 38)
-            if key.char == 'w':
+            if key.char == "w":
                 character.keyboard_press(36, 38)
-            if key.char == 'e':
+            if key.char == "e":
                 character.keyboard_press(26, 38)
-            if key.char == 'r':
+            if key.char == "r":
                 character.keyboard_press(16, 38)
-            if key.char == 't':
+            if key.char == "t":
                 character.keyboard_press(6, 38)
-            if key.char == 'y':
+            if key.char == "y":
                 character.keyboard_press(-4, 38)
-            if key.char == 'u':
+            if key.char == "u":
                 character.keyboard_press(-14, 38)
-            if key.char == 'i':
+            if key.char == "i":
                 character.keyboard_press(-24, 38)
-            if key.char == 'o':
+            if key.char == "o":
                 character.keyboard_press(-34, 38)
-            if key.char == 'p':
+            if key.char == "p":
                 character.keyboard_press(-44, 38)
-            if key.char == 'a':
+            if key.char == "a":
                 character.keyboard_press(42, 31)
-            if key.char == 's':
+            if key.char == "s":
                 character.keyboard_press(32, 31)
-            if key.char == 'd':
+            if key.char == "d":
                 character.keyboard_press(22, 31)
-            if key.char == 'f':
+            if key.char == "f":
                 character.keyboard_press(12, 31)
-            if key.char == 'g':
+            if key.char == "g":
                 character.keyboard_press(2, 31)
-            if key.char == 'h':
+            if key.char == "h":
                 character.keyboard_press(-8, 31)
-            if key.char == 'j':
+            if key.char == "j":
                 character.keyboard_press(-18, 31)
-            if key.char == 'k':
+            if key.char == "k":
                 character.keyboard_press(-28, 31)
-            if key.char == 'l':
+            if key.char == "l":
                 character.keyboard_press(-38, 31)
-            if key.char == 'z':
+            if key.char == "z":
                 character.keyboard_press(38, 23)
-            if key.char == 'x':
+            if key.char == "x":
                 character.keyboard_press(28, 23)
-            if key.char == 'c':
+            if key.char == "c":
                 character.keyboard_press(18, 23)
-            if key.char == 'v':
+            if key.char == "v":
                 character.keyboard_press(8, 23)
-            if key.char == 'b':
+            if key.char == "b":
                 character.keyboard_press(-2, 23)
-            if key.char == 'n':
+            if key.char == "n":
                 character.keyboard_press(-12, 23)
-            if key.char == 'm':
+            if key.char == "m":
                 character.keyboard_press(-22, 23)
-            if key.char == '1':
+            if key.char == "1":
                 character.keyboard_press(50, 45)
-            if key.char == '2':
+            if key.char == "2":
                 character.keyboard_press(40, 45)
-            if key.char == '3':
+            if key.char == "3":
                 character.keyboard_press(30, 45)
-            if key.char == '4':
+            if key.char == "4":
                 character.keyboard_press(20, 45)
-            if key.char == '5':
+            if key.char == "5":
                 character.keyboard_press(10, 45)
-            if key.char == '6':
+            if key.char == "6":
                 character.keyboard_press(0, 45)
-            if key.char == '7':
+            if key.char == "7":
                 character.keyboard_press(-10, 45)
-            if key.char == '8':
+            if key.char == "8":
                 character.keyboard_press(-20, 45)
-            if key.char == '9':
+            if key.char == "9":
                 character.keyboard_press(-30, 45)
-            if key.char == '0':
+            if key.char == "0":
                 character.keyboard_press(-40, 45)
 
         # handles non-alphanumeric key presses
@@ -117,17 +118,13 @@ def manage(character: Character):
             character.reset_l_hand()
 
     # create a keyboard listener
-    k_listener = keyboard.Listener(
-        on_press=k_on_press,
-        on_release=k_on_release)
+    k_listener = keyboard.Listener(on_press=k_on_press, on_release=k_on_release)
 
     # deploy keyboard listener
     k_listener.start()
 
     # create a mouse listener
-    m_listener = mouse.Listener(
-        on_move=m_on_move,
-        on_click=m_on_click)
+    m_listener = mouse.Listener(on_move=m_on_move, on_click=m_on_click)
 
     # deploy mouse listener
     m_listener.start()
